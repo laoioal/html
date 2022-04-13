@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body style="text-align: center">
+
+<header>
+
+<img src="/black/image/img/jennie1.gif" style="display: inline-block; width: 40%; height: auto;">
+
+</header>
+
+		<nav style="font-size: 0pt;">
+			<button type="button" id="btn1" class="btn">기본정보</button>
+			<button type="button" id="btn2" class="btn">좋아하는 것</button>
+			<button type="button" id="btn3" class="btn">공부하는 것</button>
+			<button type="button" id="btn4" class="btn">어려운부분</button>
+			<button type="button" id="btn5" class="btn">희망진로</button>
+			<button type="button" id="btn6" class="btn">지원동기</button>
+		</nav>
+		<article  class="article"
+		 		style="display: inline-block; float: left; width: 600px; height: 600px; font-size: 14pt; font-weight: bold;" 
+		 		id="article">
+		 		<p></p><!--여기는 내용 들어가는 부분... -->
+			</article>
+
+<script type ="text/javascript">
+	document.getElementById('btn2').onclick = function(){
+		alert('버튼클릭!!');
+	};
+	document.getElementById('btn3').onclick = function(){
+		document.getElementById('article').innerHTML = '<h2>제니 완전 좋아!!!</h2>';
+	};
+</script>
+
+
+
+
+<section style="display: inline-block; width: 30%; height: 300px; text-align: center;">section</section>
+	<aside>
+		<img src="/black/image/img/jennie2.gif" width = "10%" height= "300px">
+	</aside>
+<footer style="height:100px; padding-top: 50px; text-align: center;">footer</footer>
+
+</body>
+</html>
