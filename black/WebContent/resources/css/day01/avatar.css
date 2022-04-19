@@ -1,0 +1,56 @@
+.content {
+	text-align: center;
+}
+
+.inline {
+	display: inline-block;
+}
+#frm {
+	width: 498px;
+	height: 500px;
+	border: 1px solid gray;
+	padding-top: 10px;
+	font-size: 5pt;
+}
+label {
+	display: inline-block;
+	width: 100px;
+	text-align: right;
+	font-size: 14pt;
+}
+
+[type="text"] {
+	width: 330px;
+	font-size: 14pt;
+}
+.avtblock {
+	display: inline-block;
+	width: 100px;
+	margin: 0px;
+}
+
+span {
+	font-size: 14pt;
+	
+}
+.avtmainblock {
+	display: inline-block;
+	width: 330px;
+	height: 100px;
+}
+
+.avtsubblock {
+	display: inline-block;
+	width: 105px;
+	height: 85px;
+}
+
+.header {
+	width: 500px;
+	height:40px;
+	font-size: 25pt;
+	background-color: #E91E63;
+	color: white;
+	text-align:center;
+	padding-bottom: 5px;
+}

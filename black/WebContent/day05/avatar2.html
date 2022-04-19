@@ -3,55 +3,120 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+	input[type="radio"] {
+		position: relative;
+		top : -12px;
+	}
+</style>
 </head>
 <body>
 	<div style="text-align: center;">
-		<div style="display: inline-block; width: 600px;">
-				<div style="display: inline-block; height: 50px; width: 600px; font-size:20pt; background-color:Gainsboro">
+		<div style="display: inline-block; width: 500px;">
+			<div style="width: 500px; height:40px; font-size: 25pt; background-color: #E91E63; color: white; text-align:center; padding-bottom: 5px;">
 				회원가입
+			</div><br>
+			<form name="frm" id="frm" style="width: 498px; height: 500px; border: 1px solid gray; padding-top: 10px; font-size: 5pt;">
+				<div style="text-align: center;">
+					<label for="name" style="display: inline-block; width: 100px; text-align: right; font-size: 14pt;">회원이름 : </label>
+					<input type="text" id="name" name="name" style="width: 330px; font-size: 14pt;">
+				</div><br>
+				<div style="text-align: center;">
+					<label for="id" style="display: inline-block; width: 100px; text-align: right; font-size: 14pt;">아 이 디 : </label>
+					<input type="text" id="id" name="id" style="width: 250px; font-size: 14pt;">
+					<button type="button" style="width: 75px; height: 28px; position: relative; top: -2px; ">id check</button>
+				</div><br>
+				<div style="text-align: center;">
+					<label for="pw" style="display: inline-block; width: 100px; text-align: right; font-size: 14pt;">비밀번호 : </label>
+					<input type="text" id="pw" name="pw" style="width: 330px; font-size: 14pt;">
+				</div><br>
+				<div style="text-align: center;">
+					<label for="pwck" style="display: inline-block; width: 100px; text-align: right; font-size: 14pt;">pw check : </label>
+					<input type="text" id="pwck" name="pwck" style="width: 330px; font-size: 14pt;">
+				</div><br>
+				<div style="text-align: center;">
+					<label for="mail" style="display: inline-block; width: 100px; text-align: right; font-size: 14pt;">회원메일 : </label>
+					<input type="text" id="mail" name="mail" style="width: 330px; font-size: 14pt;">
+				</div><br>
+				<div style="text-align: center;">
+					<label for="tel" style="display: inline-block; width: 100px; text-align: right; font-size: 14pt;">전화번호 : </label>
+					<input type="text" id="tel" name="tel" style="width: 330px; font-size: 14pt;">
+				</div><br>
+				<div style="text-align: center;">
+					<label for="gen" style="display: inline-block; width: 95px; text-align: right; font-size: 14pt;">회원성별 : </label>
+					<div style="display: inline-block; width: 330px; font-size:10pt;">
+						<div style="display: inline-block; width: 160px;">
+							<input type="radio" id="gen" name="gen" value="M" ><span style="font-size: 14pt;">남자</span>
+						</div>
+						<div style="display: inline-block; width: 160px;">
+							<input type="radio" id="gen" name="gen" value="F" ><span style="font-size: 14pt;">여자</span>
+						</div>
+					</div>
+				</div><br>
+				
+				<div style="text-align: center;">
+					<label for="avt" style="display: inline-block; width: 95px; text-align: right; font-size: 14pt;">아바타 : </label>
+					<div style="display: inline-block; width: 330px; height: 100px;">
+						<div style="display: inline-block; width: 100px;"">
+							<div style="display: inline-block; height: 85px; width: 105px;">
+								<img src="../image/avatar/img_avatar1.png" width="70px" height="auto">
+							</div>
+							<div style="height: 10px;">
+								<input type="radio" name="avt" id="avt1" value="avt1">
+							</div>
+						</div>
+						<div style="display: inline-block; width: 100px;"">
+							<div style="display: inline-block; height: 85px; width: 105px;">
+								<img src="../image/avatar/img_avatar2.png" width="70px" height="auto">
+							</div>
+							<div style="height: 10px;">
+								<input type="radio" name="avt" id="avt2" value="avt2">
+							</div>
+						</div>
+						<div style="display: inline-block; width: 100px;"">
+							<div style="display: inline-block; height: 85px; width: 105px;">
+								<img src="../image/avatar/img_avatar3.png" width="70px" height="auto">
+							</div>
+							<div style="height: 10px;">
+								<input type="radio" name="avt" id="avt3" value="avt3">
+							</div>
+						</div>
+					</div>
+					<label for="avt" style="display: inline-block; width: 95px; text-align: right; font-size: 14pt;"></label>					
+					<div style="display: inline-block; width: 330px; height: 100px;">
+						<div style="display: inline-block; width: 100px;"">
+							<div style="display: inline-block; height: 85px; width: 105px;">
+								<img src="../image/avatar/img_avatar4.png" width="70px" height="auto">
+							</div>
+							<div style="height: 10px;">
+								<input type="radio" name="avt" id="avt4" value="avt4">
+							</div>
+						</div>
+						<div style="display: inline-block; width: 100px;"">
+							<div style="display: inline-block; height: 85px; width: 105px;">
+								<img src="../image/avatar/img_avatar5.png" width="70px" height="auto">
+							</div>
+							<div style="height: 10px;">
+								<input type="radio" name="avt" id="avt5" value="avt5">
+							</div>
+						</div>
+						<div style="display: inline-block; width: 100px;"">
+							<div style="display: inline-block; height: 85px; width: 105px;">
+								<img src="../image/avatar/img_avatar6.png" width="70px" height="auto">
+							</div>
+							<div style="height: 10px;">
+								<input type="radio" name="avt" id="avt6" value="avt6">
+							</div>
+						</div>
+					</div>
+					
+					
 				</div>
-				<br><br>
-			<form name="frm" method="GET">
-				<div style="display: inline-block; width: 600px; height: 500px; border: 1px solid gray; padding-top: 10pt;">
-					<div>
-						<label for="name" style="text-align: right; width: 150px; font-size: 15pt;">
-							회원이름 : 
-						</label>
-						<input type="text" name="name" id="name" style="width: 350px; font-size: 15pt;">
-					</div>
-					<div>
-						<label for="name" style="text-align: right; width: 150px; font-size: 15pt;">
-							아 이 디 : 
-						</label>
-						<input type="text" name="name" id="name" style="width: 350px; font-size: 15pt;">
-					</div>
-					<div>
-						<label for="pw" style="text-align: right; width: 150px; font-size: 15pt;">
-							비밀번호 : 
-						</label>
-						<input type="text" name="pw" id="pw" style="width: 350px; font-size: 15pt;">
-					</div>
-					<div>
-						<label for="pwck" style="text-align: right; width: 150px; font-size: 15pt;">
-							pw check : 
-						</label>
-						<input type="text" name="pwck" id="pwck" style="width: 350px; font-size: 15pt;">
-					</div>
-					<div>
-						<label for="mail" style="text-align: right; width: 150px; font-size: 15pt;">
-							회원메일 : 
-						</label>
-						<input type="text" name="mail" id="mail" style="width: 350px; font-size: 15pt;">
-					</div>
-					<div>
-						<label for="tel" style="text-align: right; width: 150px; font-size: 15pt;">
-							전화번호 : 
-						</label>
-						<input type="text" name="tel" id="tel" style="width: 350px; font-size: 15pt;">
-					</div>
-				</div>
+				
+				
 			</form>
-		</div>	
+			
+		</div>
 	</div>
 
 </body>
