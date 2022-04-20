@@ -5,11 +5,16 @@
 .inline {
 	display: inline-block;
 }
+.inline1 {
+	display: inline-block;
+	width: 330px;
+}
 #frm {
 	width: 498px;
-	height: 500px;
+	height: 515px;
 	border: 1px solid gray;
 	padding-top: 10px;
+	padding-bottom: 15px;
 	font-size: 5pt;
 }
 label {
@@ -23,11 +28,6 @@ label {
 	width: 330px;
 	font-size: 14pt;
 }
-.avtblock {
-	display: inline-block;
-	width: 100px;
-	margin: 0px;
-}
 
 span {
 	font-size: 14pt;
@@ -37,12 +37,27 @@ span {
 	display: inline-block;
 	width: 330px;
 	height: 100px;
+	margin: 5px;
+	font-size: 0pt;
+	text-align: center;
+	
+}
+.avtblock {
+	display: inline-block;
+	width: 105px;
+/* 	margin-right: -10px;
+	margin-left: -10px; */
+	
 }
 
 .avtsubblock {
 	display: inline-block;
-	width: 105px;
+	width: 100px;
 	height: 85px;
+	margin: 0px;
+	overflow: hidden;
+	
+	
 }
 
 .header {
@@ -53,4 +68,61 @@ span {
 	color: white;
 	text-align:center;
 	padding-bottom: 5px;
+}
+
+.but > button {
+	width: 33.33%;
+	border: 0pt; 
+	height: 30px;
+	color: white;
+	cursor: pointer;
+}
+img {
+	width: 90px;
+	height: auto;
+}
+
+.content > button:last-child {
+	background-color: #2196f3;
+	border: none;
+	color: white;
+}
+
+.but {
+	font-size:0pt;
+	margin-top: 15px;
+}
+
+.avtblock > div > input {
+	margin-top: 15px;
+}
+.avtblcok >div:last-child {
+	height: 10px;
+}
+
+.ge {
+	display: inline-block;
+	width: 330px;
+	font-size:10pt;	
+}
+.ge > * {
+	display: inline-block;
+	width: 160px;
+}
+#id {
+	width: 250px;
+}
+#avtla {
+	width: 95px;
+	position: relative;
+	top: -214px;
+}
+#rbtn {
+	background-color: #ff5722;
+}
+#hbtn {
+	background-color: #4caf50;;
+}
+#jbtn {
+	background-color: #2196f3;
 }

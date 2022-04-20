@@ -9,6 +9,19 @@
 	display: inline-block;
 	width: 650px;
 }
+/* 너비 */
+.p50 {
+	width: 50%;
+}
+.mx650 {
+	max-width:650px;
+}
+
+.mn600 {
+	min-width: 600px;
+}
+
+
 /* color */
 .blue{
 	background-color: #2196F3;
@@ -17,13 +30,13 @@
 	background-color: #4CAF50;
 }
 .pink{
-	background-color: #e91e63;;
+	background-color: #e91e63;
 }
 .deeporange{
-	background-color: #ff5722;;
+	background-color: #ff5722;
 }
 .indigo{
-	background-color: #3f51b5;;
+	background-color: #3f51b5;
 }
 /* width size*/
 .w100{
