@@ -1,0 +1,45 @@
+.d1 > div:first-child {
+	text-align: center;
+	color: red;
+}
+
+.d1 > p {
+	text-align: right;
+	color: orange;
+}
+
+.d1 > div + p {
+	color: blue;
+}
+
+.d1 > ul:nth-child(6) {
+	text-align: center;
+	list-style: square;
+	color: yellow;
+}
+
+.d1 > ul > li:nth-child(3){
+	color : pink;
+	text-align: left;
+}
+
+.d1 h2 {
+	color : pink;
+} 
+
+div h1 {
+	color: red;
+}
+
+h1 > span {
+	color: blue;
+}
+
+li + span {
+	color : beige
+}
+div ~ h2 {
+	border: 1px solid black;
+	background-color: red;
+	color: white;
+} 
