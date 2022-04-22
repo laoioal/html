@@ -1,0 +1,74 @@
+.center {
+	text-align: center;
+}
+
+.sub {
+	display: inline-block;
+	width: 700px;
+	border: 1px solid black;
+	box-shadow: 1px 1px 1px 1px gray;
+}
+
+.header {
+	display: inline-block;
+	width: 600px;
+	font-size: 20pt;
+	margin-top: 13px;
+	background-color: Azure;
+}
+
+.main {
+	display: inline-block;
+	width: 600px;
+	margin-top: 20px;
+	margin-bottom: 5px;
+	
+	border: 1px solid gray;
+	box-shadow: 1px 1px 1px 1px gray;
+	text-align: left;
+}
+.main-avt {
+	display: inline-block;
+	text-align: left;
+	float: left;
+}
+
+.avatar {
+	display: inline-block;
+	width: 200px;
+	height: 230px;
+	border: 1px solid black;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	background: url('/black/resources/img/avatar/img_avatar1.png');
+	background-size: 200px auto;
+
+}
+.main-mem {
+	display: inline-block;
+	float: left;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+.mem {
+	display: block;
+	width: 340px;
+	font-size: 3pt;
+}
+.button {
+	display: inline-block;
+	width: 600px;
+	margin: 5px 0px 10px 0px;
+}
+button {
+	width: 33.33%;
+	height: 30px;
+	cursor: pointer;
+	float: left;
+	background-color: AliceBlue;
+	border: 0.1px solid gray;
+}
+.font {
+	font-size: 13pt;
+}

@@ -1,0 +1,54 @@
+.center {
+	text-align: center;
+}
+.inline {
+	width: 500px;
+	display: inline-block;
+}
+.header {
+	width: 500px;
+	font-size: 30pt;
+	font-weight: bold;
+	border: 1px solid gray;
+	font-style: italic;
+	
+}
+.body {
+	width: 500px;
+	border: 1px solid gray;
+	margin-top: 20px;
+	text-align: left;
+}
+.input {
+		width:300px;
+		display: inline-block;
+		margin: 5px;
+		
+}
+input {
+	background-color: Snow;
+	text-align: center;
+	width: 340px;
+	height: 50px;
+	font-size: 13pt;
+	margin: 3px 0px 3px 0px;
+}
+input:hover {
+	background-color: white;
+}
+.log {
+	display: inline-block;
+	float: right;
+	position: relative;
+	top: 9px;
+	right: 15px;
+	
+}
+.logbut {
+	display:block;
+	width: 120px;
+	height: 115px;
+	font-size: 15pt;
+	font-weight: bold;
+	margin: 0px;
+}
