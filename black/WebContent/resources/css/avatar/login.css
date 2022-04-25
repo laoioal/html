@@ -11,6 +11,7 @@
 	font-weight: bold;
 	border: 1px solid gray;
 	font-style: italic;
+	box-shadow: 1px 1px 1px 1px gray;
 	
 }
 .body {
@@ -18,6 +19,7 @@
 	border: 1px solid gray;
 	margin-top: 20px;
 	text-align: left;
+	box-shadow: 1px 1px 1px 1px gray;
 }
 .input {
 		width:300px;
@@ -43,6 +45,7 @@ input:hover {
 	top: 9px;
 	right: 15px;
 	
+	
 }
 .logbut {
 	display:block;
@@ -51,4 +54,27 @@ input:hover {
 	font-size: 15pt;
 	font-weight: bold;
 	margin: 0px;
+	background-color: FloralWhite;
+	border: 0.1px solid gray;
+}
+.logbut:hover {
+	
+}
+
+.button {
+	margin-top: 4px;
+}
+button {
+	background-color: white;
+	border: none;
+	cursor: pointer;
+}
+
+.but1, .but2, .but3 {
+	display: inline-block;
+	width: 33.33%;
+	float: left;
+}
+:link {
+	text-decoration: none;
 }

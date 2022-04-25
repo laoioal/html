@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript" src="/black/resources/js/avatar/login.js"></script>
 <link rel="stylesheet" type="text/css" href="/black/resources/css/avatar/login.css">
 
 </head>
@@ -13,15 +14,44 @@
 			
 			<div class="body">
 				<div class="input">
-					<input type="text" value="아이디">
-					<input type="text" value="비밀번호">
+					<input type="text" id="id" value="아이디">
+					<input type="password" id="pw" value="비밀번호">
 				</div>
 				<div class="log">
-					<button type="button" class="logbut">로그인</button>
+					<button type="button" class="logbut" id="log" onclick="log()">로그인</button>
+					
 				</div>
 			</div>
+			<form>
+				<div class="button">
+					<div class="but1">
+						<button type="button">아이디 찾기</button>
+					</div>
+					<div class="but2">
+						<button type="button">비밀번호 찾기</button>
+					</div>
+					<div class="but3">
+						<button type="button">회원가입</button>
+					</div>
+				</div>
+			</form>
 			
 		</div>	
-	</div>
+	</div>	
+
+<script type="text/javascript">
+	document.getElementById('log').onclick = function() {
+		var id = document.getElementById('id').value;
+		var pw = document.getElementById('pw').value;
+		if(id === "jennie" && pw === "12345") {
+		/* 	alert("로그인 성공."); */
+			location.href="/black/css/day04/avatar/mem.html";
+		} else {
+			alert("아이디나 비밀번호를 확인해주세요.");
+		}
+	}
+
+</script>
+	
 </body>
 </html>

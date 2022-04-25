@@ -14,15 +14,13 @@
 	width: 600px;
 	font-size: 20pt;
 	margin-top: 13px;
-	background-color: Azure;
+	background-color: AliceBlue;
 }
 
 .main {
 	display: inline-block;
 	width: 600px;
-	margin-top: 20px;
-	margin-bottom: 5px;
-	
+	margin: 20px 0px 5px 0px;
 	border: 1px solid gray;
 	box-shadow: 1px 1px 1px 1px gray;
 	text-align: left;
@@ -38,12 +36,14 @@
 	width: 200px;
 	height: 230px;
 	border: 1px solid black;
-	margin-top: 20px;
-	margin-left: 20px;
-	margin-bottom: 20px;
-	background: url('/black/resources/img/avatar/img_avatar1.png');
-	background-size: 200px auto;
-
+	margin: 20px 0px 20px 20px;
+/* 	background: url('/black/resources/img/avatar/img_avatar1.png');
+	background-size: 200px auto; */
+}
+	.avatar > img {
+	overflow: hidden;
+	width: 200px;
+	height: 230px;
 }
 .main-mem {
 	display: inline-block;
@@ -71,4 +71,28 @@ button {
 }
 .font {
 	font-size: 13pt;
+}
+
+.mainheader {
+	display: inline-block;
+	width: 700px;
+	border: 1px solid black;
+	box-shadow: 1px 1px 1px 1px gray;
+	margin-bottom: 20px;
+	font-size: 30pt;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.frd {
+	display: inline-block!important;
+}
+
+.lmargin{
+	margin-left : 5px;
+}
+input {
+	width: 200px;
+	border: 0px;
+	
 }
