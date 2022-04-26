@@ -3,8 +3,62 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="sylesheet" type="text/css" href="/black/resources/css/w3.css">
+<style type="text/css">
+	.w600 {
+		width: 600px;
+	}
+	form {
+	
+	}
+</style>
 </head>
 <body>
-
+	<div class="w3-center">
+		<div class="w600">
+			<form>
+				<dvi>
+					<label id="lid">아이디 : </label>
+				</dvi>
+				<div>
+					<input type="text" id="id">
+				</div>
+				<dvi>
+					<label id="lpw">비밀번호 : </label>
+				</dvi>
+				<div>
+					<input type="text" id="pw">
+				</div>
+				<div>
+					<input type="text" id="ip1">
+					<input type="text" id="ip2">
+				</div>
+				<div>
+					<button type="button" id="btn1">버튼1</button>
+					<button type="button" id="btn2">버튼2</button>
+					<button type="button" id="btn3">버튼3</button>
+					<button type="button" id="btn4">버튼4</button>
+				</div>
+			</form>
+		</div>
+	</div>
+<script type="text/javascript">
+	document.getElementById('btn1').onclick = function() {
+		var id = document.getElementById('lid').innerHTML;
+		document.getElementById('ip1').value = id;
+	}
+	document.getElementById('btn2').onclick = function() {
+		var id = document.getElementById('id').value;
+		document.getElementById('ip1').value = id;
+	}
+	document.getElementById('btn3').onclick = function() {
+		var pw = document.getElementById('lpw').innerHTML;
+		document.getElementById('ip2').value = pw;
+	}
+	document.getElementById('btn4').onclick = function() {
+		var pw = document.getElementById('pw').value;
+		document.getElementById('ip2').value = pw;
+	}
+</script>
 </body>
 </html>
