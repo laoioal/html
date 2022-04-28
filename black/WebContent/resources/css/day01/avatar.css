@@ -24,11 +24,15 @@ label {
 	font-size: 14pt;
 }
 
-[type="text"] {
+[type="text"], [type="password"] {
 	width: 330px;
 	font-size: 14pt;
 }
 
+[type="password"] {
+	width: 330px!important;
+	font-size: 14pt;
+}
 span {
 	font-size: 14pt;
 	

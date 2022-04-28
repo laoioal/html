@@ -11,9 +11,9 @@
 
 </script>
 </head>
-<body>
+<body onLoad="func01()">
 	<div class="w3-center w3-content mx650">
-		<h1 class="w3-lime w3-card-4">Java Script Event 01</h1>
+		<h1 class="w3-lime w3-card-4" id="head">Java Script Event 01</h1>
 		<form class="w3-margin-top w3-border w3-padding">
 			<div class="box" style="width: 100%;">
 				<label for="txt1" class="w3-col m3 w3-right-align w3-margin-right" style="font-size:20pt;">입력1 : </label>
@@ -31,7 +31,22 @@
 		
 	</div>
 <script type="text/javascript">
-
+	function func01() {
+/* 		document.getElementById('txt1').onfocus = function() {
+			document.getElementById('head').setAttribute('class', 'w3-green w3-card-4');
+		};
+		
+		document.getElementById('txt1').onchange = function() {
+			document.getElementById('head').setAttribute('class', 'w3-lime w3-card-4');
+		} */
+		document.getElementById('txt1').onblur = function() {
+			document.getElementById('head').setAttribute('class', 'w3-lime w3-card-4');
+		};
+		document.getElementById('txt1').onfocus = function() {
+			document.getElementById('head').setAttribute('class', 'w3-green w3-card-4');
+		};
+		
+	}
 
 </script>
 </body>
