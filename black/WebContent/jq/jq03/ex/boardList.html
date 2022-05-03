@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Study</title>
+<link rel="stylesheet" type="text/css" href="/black/resources/css/w3.css">
+<link rel="stylesheet" type="text/css" href="/black/resources/css/base.css">
+<script type="text/javascript" src="/black/resources/js/jquery-3.6.0.min.js"></script>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#cbtn, #lbtn').click(function() {
+			$('#id01').css('display', 'none');
+		});
+		$('h4').css('position', 'relative');
+		$('h4').css('top', '20px');
+		$.ajax({
+			url:'/black/jq/jq03/board.json',
+			type:'POST',
+			dataType:'json',
+			success: function(arr) {
+				
+				$.each(arr, function(idx, data) {
+				/* for(var i = 0; i < arr.length; i++) {
+					var data = arr[i]; each와 차이 물어보기*/
+				$('#brd').append(
+						'<div class="w3-col w3-border-bottom" id="' + data.bno + '">' +
+						'<div class="w3-col m2 w3-border-right">' + data.bno + '</div>' +
+						'<div class="w3-col m2 w3-border-right">' + data.id + '</div>' +
+						'<div class="w3-col m5 w3-border-right w3-left-align pdl10 overhidden">' + data.title + '</div>' +
+						'<div class="w3-col m3">' + data.wdate + '</div>' +
+						'</div>'
+				)
+				// 클릭 이벤트 발생
+				$('#' + data.bno).click(function(){
+					$('#id01').css('display', 'block');
+				}) 
+					
+				
+				/* } */
+				});
+			},
+			error: function() {
+				alert('## 통신에러 ##');
+			}
+			
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="w3-content w3-center mx650">
+		<h1 class="w3-card-4 w3-padding w3-blue">Black Board</h1>
+		<div class="w3-col w3-border w3-margin-top w3-card-4" id="brd">
+			<div class="w3-col w3-border-bottom">
+				<div class="w3-col m2 w3-border-right">글번호</div>
+				<div class="w3-col m2 w3-border-right">작성자</div>
+				<div class="w3-col m5 w3-border-right">타이틀</div>
+				<div class="w3-col m3">작성일</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- 모달 -->
+	<div id="id01" class="w3-modal">
+		<div class="w3-modal-content w3-animate-top w3-card-4">
+			<header class="w3-blue"> 
+		        <span id="cbtn" class="w3-button w3-display-topright">&times;</span>
+		        <h2 class=" w3-center">게시글 상세보기</h2>
+			</header>
+	      	<div class="w3-container">
+	      	
+	      		<div class="w3-col m3 pdl10">
+			        <div class="w3-col overhidden w3-center w3-circle w3-margin-bottom" style="width: 170px;">
+			        	<img src="/black/resources/img/avatar/img_avatar4.png" class="avtimg">
+			        </div>
+		        </div>
+		        <div class="w3-col m8">
+		        	<h4 class="w3-left-align">글번호 : </h4>
+		        	<h4 class="w3-left-align">작성자 : </h4>
+		        	<h4 class="w3-left-align">작성일 : </h4>
+		        </div>
+		        
+		        <hr class="leftclear">
+		        <p>Some text..</p>
+	     	 </div>
+	      	<footer class="mt20">
+	        	<div class="w3-third w3-button w3-orange" id="lbtn">List</div>
+	        	<div class="w3-third w3-button w3-blue" id="ebtn">Edit</div>
+	        	<div class="w3-third w3-button w3-yellow" id="dbtn">Delete</div>
+	      	</footer>
+    	</div>
+  </div>
+	
+	
+</body>
+</html>
