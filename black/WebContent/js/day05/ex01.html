@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Study</title>
+<link rel="stylesheet" type="text/css" href="/black/resources/css/w3.css">
+<link rel="stylesheet" type="text/css" href="/black/resources/css/base.css">
+<style type="text/css">
+</style>
+<script type="text/javascript">
+
+
+</script>
+</head>
+<body>
+
+	
+	<hr id="hline">
+<script type="text/javascript">
+/* 
+hr 태그 위에 자바스크립트로 로그인 폼을 만들어서 추가하세요
+*/
+	// 전체 감싸는 태그
+	var el = document.createElement('div');
+	el.setAttribute('class', 'w3-content w3-center mx650');
+	
+	var sub = document.createElement('form');
+	sub.setAttribute('class', 'w3-center w3-border w3-margin-top')
+	
+	// 라벨 인풋태그 감사는 태그
+	var div1 = document.createElement('div');
+	div1.setAttribute('class', 'box');
+
+	// 라벨 인풋태그
+	var la = document.createElement('label');
+	la.setAttribute('class', 'w3-col m3 w3-right-align');
+	la.innerHTML = '아이디 : ';
+	
+	var inp = document.createElement('input');
+	inp.setAttribute('class', 'w3-col m8 w3-input');
+	
+	
+	var sum = div1.append(inp);
+/* 	sum = sub.append(sum);
+	sum = el.append(sum); */
+	document.body.append(sum);
+
+</script>
+</body>
+</html>

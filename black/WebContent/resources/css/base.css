@@ -1,3 +1,15 @@
+.hidden {
+	display: none;
+}
+.overhidden {
+	overflow: hidden;
+}
+.leftclear {
+	clear: left;
+}
+.rightclear {
+	clear: right;
+}
 .content {
 	text-align: center;
 	
@@ -28,8 +40,17 @@
 }
 
 /* padding */
+.pd10 {
+	padding: 10px;
+}
 .pdl10 {
 	padding-left: 10px;
+}
+.pdr10 {
+	padding-right: 10px;
+}
+.pdr16 {
+	padding-right: 16px;
 }
 /* color */
 .blue{
@@ -96,4 +117,23 @@
 }
 .w50{
 		width: 50px;
+}
+.wh100 {
+	width: 100px;
+	height: 100px;
+}
+
+.ml10 {
+	margin-left: 10px;
+}
+
+/* 아바타 관련 클래스 */
+.avtbox {
+	width: 148px;
+	height: 148px;
+	border: 1px solid gray;
+}
+.avtimg {
+	width: 100%;
+	height: auto;
 }

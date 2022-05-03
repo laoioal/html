@@ -1,0 +1,44 @@
+[
+	{
+		"bno": "10001",
+		"id": "jennie",
+		"savename": "img_avatar5.png",
+		"title": "html",
+		"body": "html 정~~말 어려워요",
+		"wdate": "2022년 5월 1일"
+	},
+	{
+		"bno": "10002",
+		"id": "lisa",
+		"savename": "img_avatar1.png",
+		"title": "할수있다.",
+		"body": "어려워도 할수 있어요",
+		"wdate": "2022년 5월 2일"
+	},
+	{
+		"bno": "10003",
+		"id": "jisoo",
+		"savename": "img_avatar2.png",
+		"title": "내일은 무슨날?",
+		"body": "JDBC 테스트하는날!",
+		"wdate": "2022년 5월 3일"
+	},
+	{
+		"bno": "10004",
+		"id": "rose",
+		"savename": "img_avatar3.png",
+		"title": "이건 뭐지",
+		"body": "지금까지 이런 과목은 없었다!\r\n이것은 js인가 jq인가",
+		"wdate": "2022년 5월 3일"
+	},
+	{
+		"bno": "10005",
+		"id": "둘리",
+		"savename": "img_avatar6.png",
+		"title": "나의 아이디",
+		"body": "안녕\r\n내 아이디는 한글이야\r\n한글로 쓰면 인코딩으로 인해 깨질지 아니면 잘 나올지 테스트해보기 위해서 한글로 작성했어\r\n테스트가 끝났으니 이젠 안녕 ",
+		"wdate": "2022년 5월 4일"
+	}
+
+
+]

@@ -92,4 +92,6 @@ document.getElementById('lbtn').onclick = function(){
 	document.getElementById('tid').focus();
 	
 	}
+	
+
 }

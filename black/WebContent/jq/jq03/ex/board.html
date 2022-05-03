@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Study</title>
+<link rel="stylesheet" type="text/css" href="/black/resources/css/w3.css">
+<link rel="stylesheet" type="text/css" href="/black/resources/css/base.css">
+<script type="text/javascript" src="/black/resources/js/jquery-3.6.0.min.js"></script>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	$(document).ready(function() {
+  		
+		$('#ck').click(function() {
+			$.ajax({
+				url: '/black/jq/jq03/board.json',
+				data: 'POST',
+				dataType: 'json',
+				data: {},
+				success: function(arr) {
+					if(arr.length <= 0) {
+						return;
+					}
+				$('#ck').remove();
+				
+				for(var i = 0; i < arr.length; i++) {
+					var data = arr[i];
+
+						$('#brd').append(
+								'<div class="w3-col w3-border w3-card-4 w3-padding w3-margin-bottom">' +
+								'<div class="w3-col m3 pdr16 w3-border-right">' +
+								'<img src="/black/resources/img/avatar/' + data.savename+ '" class="avtimg" id="' + data.bno +'">' +
+								'<h4>' + data.id + '</h4>' +
+							'</div>' +
+							
+							'<div class="w3-col m9 pdl10 w3-padding">' +
+								'<h3 class="w3-col m8 w3-left-align">' + data.title + '</h3>' +
+								'<h4 class="w3-col m4 w3-right-align">' + data.wdate + '</h4>' +
+								'<hr class="leftclear">' +
+								'<div class="w3-left-align w3-col">' + data.body.replace(/\r\n/g, '<br>') + '</div>' +
+							'</div>' +
+							'</div>'
+						);
+					};
+					$('#brd').removeClass('hidden');
+				},
+				
+		error: function() {
+			alert('### 연동 실패 ###');
+		}
+		
+			});
+		
+		
+		});  
+		
+	});
+</script>
+</head>
+<body>
+	<div class="w3-content w3-center mx650">
+		<h1 class="w3-pink w3-padding w3-card-4">Black Board</h1>
+		<div class="w3-col hidden" id="brd"><!-- 전체 감싸는 태그 -->
+ 	<!-- 	
+  			<div class="w3-col w3-border w3-card-4">
+			 <div class="w3-col m3 pdr10 w3-border-right w3-padding">아바타부분
+				<img src="/black/resources/img/avatar/img_avatar1.png" class="avtimg">
+				<h4>아이디</h4>
+			</div>
+			
+			<div class="w3-col m9 pdl10 w3-padding">글내용 들어가는 부분
+				<h3 class="w3-col m8 w3-left-align">
+					타이틀
+				</h3>
+				<h3 class="w3-col m4 w3-right-align">
+					날짜
+				</h3>
+				<hr class="leftclear">
+				<div class="w3-left-align">
+				글본문
+				</div>
+			</div> 
+		 </div> 
+		  -->
+		</div>
+		<div class="w3-col w3-margin-top">
+			<div class="w3-content w3-button w3-orange" style="display: block;" id="ck">click</div>
+		</div>
+	</div>
+</body>
+</html>
