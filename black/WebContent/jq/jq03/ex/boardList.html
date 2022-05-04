@@ -13,6 +13,9 @@
 		$('#cbtn, #lbtn').click(function() {
 			$('#id01').css('display', 'none');
 		});
+		$('#bd').css('position', 'relative');
+		$('#bd').css('top', '-20px');
+		
 		$('h4').css('position', 'relative');
 		$('h4').css('top', '20px');
 		$.ajax({
@@ -65,7 +68,7 @@
 	
 	<!-- 모달 -->
 	<div id="id01" class="w3-modal">
-		<div class="w3-modal-content w3-animate-top w3-card-4">
+		<div class="w3-modal-content w3-animate-top w3-card-4" style="max-width: 800px;">
 			<header class="w3-blue"> 
 		        <span id="cbtn" class="w3-button w3-display-topright">&times;</span>
 		        <h2 class=" w3-center">게시글 상세보기</h2>
@@ -84,7 +87,17 @@
 		        </div>
 		        
 		        <hr class="leftclear">
-		        <p>Some text..</p>
+		        <div id="bd">
+			        <div class="w3-col m2">
+			        	<h3>글제목 : </h3>
+			        </div>
+			        <div class="w3-col m10" id="bd">
+			        	<h3>제목내용</h3>
+			        	<div class="w3-col w3-border">
+			        		본문
+			        	</div>
+			        </div>
+			    </div>    
 	     	 </div>
 	      	<footer class="mt20">
 	        	<div class="w3-third w3-button w3-orange" id="lbtn">List</div>

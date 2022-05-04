@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Study</title>
+<link rel="stylesheet" type="text/css" href="/black/resources/css/w3.css">
+<link rel="stylesheet" type="text/css" href="/black/resources/css/base.css">
+<script type="text/javascript" src="/black/resources/js/jquery-3.6.0.min.js"></script>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#hbtn').click(function() {
+			$.ajax({
+				url:'/black/jq/jq03/board.json',
+				type:'POST',
+				dataType:'json',
+				data: {},
+				success: function(arr) {
+					
+					$.each(arr, function(idx, data) {
+						$('#last').append(
+							'<div class="box w3-border" style="width:100px; height:100px; margin: 10px 5px;">' + data.id + '</div>'	
+						);
+					});
+				},
+				error: function() {
+					alert('## 통신에러 ##');
+				}
+			})
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="w3-content w3-center mx650">
+		<h1 class="w3-blue w3-card-4 w3-padding">Login</h1>
+		<div id="last">
+			<div class="w3-col w3-border w3-padding w3-card-4 w3-margin-top w3-margin-bottom">
+				<div class="w3-col m2 w3-right-align">아이디 : </div>
+				<input class="w3-input w3-col m8 w3-border w3-margin-left">
+			</div>
+			<div>
+				<div class="w3-button w3-third w3-green" id="hbtn">Home</div>
+				<div class="w3-button w3-third w3-blue" id="ibtn">idCheck</div>
+				<div class="w3-button w3-third w3-pink" id="rbtn">Reset</div>
+			</div>
+			<!-- <div class="box w3-border w3-margin" style="width:100px; height:100px">가</div>		 -->	
+		</div>
+		
+	</div>
+</body>
+</html>

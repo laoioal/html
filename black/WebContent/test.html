@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Study</title>
+<link rel="stylesheet" type="text/css" href="/black/resources/css/w3.css">
+<link rel="stylesheet" type="text/css" href="/black/resources/css/base.css">
+<script type="text/javascript" src="/black/resources/js/jquery-3.6.0.min.js"></script>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var el = $('#h2 ~ div').attr('id');
+		var str = $('#h2').html();
+		$('#' + el).html(str);
+		
+	});
+</script>
+</head>
+<body>
+	<h2 id="h2">1253</h2>
+	<div class="div1" id="div1">555</div>
+</body>
+</html>
