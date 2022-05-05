@@ -11,7 +11,7 @@
 }
 #frm {
 	width: 498px;
-	height: 515px;
+	
 	border: 1px solid gray;
 	padding-top: 10px;
 	padding-bottom: 15px;
@@ -129,4 +129,31 @@ img {
 }
 #jbtn {
 	background-color: #2196f3;
+}
+input[type="radio"] {
+	position: relative;
+	top : -2px;
+}
+body > div > div:nth-first {
+	width: 500px;
+}
+#id ~ button{
+	width: 75px;
+	height: 28px;
+	position: relative;
+	top: -2px;
+}
+#lgen {
+	width: 95px;
+}
+.hidden {
+	display: none;
+	text-align: right;
+	position: relative;
+	top: 5px;
+	right: 40px;
+}
+
+#avtblock1, #avtblock2, #avtla {
+	display: none;
 }
