@@ -9,16 +9,15 @@
 <style type="text/css">
 </style>
 <script type="text/javascript">
-	$(document).ready(function() {
-		var el = $('#h2 ~ div').attr('id');
-		var str = $('#h2').html();
-		$('#' + el).html(str);
-		
-	});
 </script>
 </head>
 <body>
-	<h2 id="h2">1253</h2>
-	<div class="div1" id="div1">555</div>
+ <fieldset> 
+ <legend>개인 정보 입력</legend> 
+ <p>이름 : <input type="text" name="name"></p> 
+ <p>학교 : <input type="text" name="school"></p> 
+ <input type="submit" value="제출"> 
+ <input type="reset" value="다시작성"> 
+ </fieldset> 
 </body>
 </html>

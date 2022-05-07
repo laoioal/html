@@ -66,12 +66,10 @@ span {
 
 .header {
 	width: 500px;
-	height:40px;
-	font-size: 25pt;
 	background-color: #E91E63;
 	color: white;
 	text-align:center;
-	padding-bottom: 5px;
+	margin-bottom: 0px;
 }
 
 .but > button {
@@ -154,6 +152,9 @@ body > div > div:nth-first {
 	right: 40px;
 }
 
-#avtblock1, #avtblock2, #avtla {
+/* #avtblock1, #avtblock2, #avtla {
 	display: none;
+} */
+h1 {
+	margin-bottom: 0px;
 }

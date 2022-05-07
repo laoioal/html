@@ -1,12 +1,20 @@
 // 정규표현식
 var idpwPat = /^[a-zA-Z0-9]{4,10}$/ // 아이디 비밀번호
-var pwPat = /^[a-zA-Z0-9]{4,10}$/ // 가점용 비밀번호
 var mailPat = /^[a-zA-Z0-9]{4,10}@[a-zA-Z]{2,10}.[a-zA-Z]{2,3}.?[a-zA-Z]{0,2}$/ // 메일
 var telPat = /^010-[0-9]{4}-[0-9]{4}$/ // 전화
 
+var pwPat = /[a-zA-Z0-9]{4,10}[A-Z]+[0-9]+/ // 가점용 비밀번호
 
 var genValue = '';
 var avtValue = '';
+
+// 아이디체크 이벤트
+$('#idck').click(function() {
+	var idck = $('#id').val();
+	if(idck) {
+		alert('사용 가능한 아이디입니다.');
+	}
+});
 
 // 성별 클릭시 아바타 조회 이벤트
 $('[name="gen"]').click(function() {
@@ -110,9 +118,9 @@ $('#jbtn').click(function() {
 		$('#tel').val('');
 		$('#tel').focus();
 	} else if (!genValue) {
-		alert('성별을 입력해주세요');
+		alert('성별을 선택해주세요');
 	} else if (!avtValue) {
-		alert('아바타를 입력해주세요');
+		alert('아바타를 선택해주세요');
 	} else {
 		$('#frm').submit();
 	}
