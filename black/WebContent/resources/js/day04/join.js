@@ -3,7 +3,7 @@ var idpwPat = /^[a-zA-Z0-9]{4,10}$/ // 아이디 비밀번호
 var mailPat = /^[a-zA-Z0-9]{4,10}@[a-zA-Z]{2,10}.[a-zA-Z]{2,3}.?[a-zA-Z]{0,2}$/ // 메일
 var telPat = /^010-[0-9]{4}-[0-9]{4}$/ // 전화
 
-var pwPat = /[a-zA-Z0-9]{4,10}[A-Z]+[0-9]+/ // 가점용 비밀번호
+var pwPat =/^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
 
 var genValue = '';
 var avtValue = '';
@@ -64,7 +64,7 @@ $('#jbtn').click(function() {
 	
 	
 	var idResult = idpwPat.test(pid);
-	var pwResult = idpwPat.test(ppw);
+	var pwResult = pwPat.test(ppw);
 	var mailResult = mailPat.test(pmail);
 	var telResult = telPat.test(ptel);
 
