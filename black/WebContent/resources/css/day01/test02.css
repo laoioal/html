@@ -81,23 +81,23 @@ h2.ttl1 {
 	font-weight: bold;
 	color: aqua;
 }
-:visited {
+ :visited {
 	text-decoration: none;
 	font-size: 10pt;
 	font-weight: normal;
 	color: #ff5722;
 }
 
-a:actice{
+a:active{
 	background-color: #e91e63;
 	color: #3f51b5;
 	}
-	
+
 [href="test01.html"]:hover {
 	display: block;
 	background-color: #e91e63;
 	color: #3f51b5;
-}
+} 
 
 #inTxt {
 	display: inline-block;
