@@ -3,17 +3,52 @@ var idpwPat = /^[a-zA-Z0-9]{4,10}$/ // 아이디 비밀번호
 var mailPat = /^[a-zA-Z0-9]{4,10}@[a-zA-Z]{2,10}.[a-zA-Z]{2,3}.?[a-zA-Z]{0,2}$/ // 메일
 var telPat = /^010-[0-9]{4}-[0-9]{4}$/ // 전화
 
-var pwPat =/^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
+var pwPat =/^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{4,10}$/;
 
 var genValue = '';
 var avtValue = '';
 
 // 아이디체크 이벤트
 $('#idck').click(function() {
-	var idck = $('#id').val();
-	if(idck) {
-		alert('사용 가능한 아이디입니다.');
-	}
+
+			var sid = $('#id').val();
+			if(!sid) {
+				return;
+			}
+
+			$.ajax({
+				url: '/black/member/idCheck.pink',
+				type: 'GET',
+				dataType: 'json',
+				data: {
+					id: sid
+					},
+				success: function(data) {
+					var result = data.result;
+					alert(data);
+					alert(result);
+					if(result == 'OK') {
+						// 이 경우는 사용가능한 아이디인 경우이므로
+						alert('사용가능한 아이디 입니다.');
+					} else {
+						alert('### 이미 사용되고 있는 아이디 입니다.');
+						$('#id').val('');
+					}
+				},
+				error: function() {
+					alert('### 통신에러 ###');
+				}
+
+			});
+});
+$('#hbtn').click(function(){
+	$(location).attr('href', '/black/')
+});
+$('#rbtn').click(function() {
+	// $('#frm').reset(); jquery에는 없는 함수
+	document.frm.reset();
+	$('#patck').css('display', 'none');
+	
 });
 
 // 성별 클릭시 아바타 조회 이벤트
@@ -44,10 +79,10 @@ $('#pwck').keyup(function() {
 	var ppwck = $('#pwck').val();
 	if(ppw == ppwck) {
 		$('#patck').css('color', 'blue');
-		$('#patck').html('동일한 패스워드입니다.')
+		$('#patck').html('* 비밀번호가 일치합니다. *')
 	} else {
 		$('#patck').css('color', 'red');
-		$('#patck').html('패스워드가 일치하지 않습니다.')
+		$('#patck').html('# 비밀번호가 일치하지 않습니다. #')
 	}
 });
 
@@ -93,7 +128,7 @@ $('#jbtn').click(function() {
 		alert('비밀번호를 입력해주세요');
 		$('#pw').focus();
 	} else if(!pwResult) {
-		alert('잘못된 비밀번호입니다. 영문, 숫자를 포함하여 4~10 이내로 생성해주세요');
+		alert('잘못된 비밀번호입니다. 영문 소대문자, 숫자, 특수문자를 포함하여 4~10 이내로 생성해주세요');
 		$('#pw').val('');
 		$('#pw').focus();
 	} else if(!ppwck) {
